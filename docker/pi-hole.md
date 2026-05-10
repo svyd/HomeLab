@@ -116,8 +116,6 @@ https://blocklistproject.github.io/Lists/ransomware.txt
 https://blocklistproject.github.io/Lists/scam.txt
 https://big.oisd.nl/
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
-https://energized.pro/antipopads-re/domains.txt
-https://energized.pro/extreme/domains.txt
 ```
 
 # Lists from Arsenii
