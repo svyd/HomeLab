@@ -14,6 +14,7 @@ Core containers running on my lab:
 - [Syncthing](/docker/syncthing.md) — file sync
 - [Tailscale](/docker/tailscale.md) — mesh VPN
 - [WireGuard Easy](/docker/wireguard-easy.md) — lightweight VPN
+- [Dockhand](/docker/dockhand.md) = Modern Docker management for everyone
 
 ### 💾 Ugreen NAS
 [NASync DXP6800 Pro](/nas) configs and tweaks
