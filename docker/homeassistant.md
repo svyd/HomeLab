@@ -1,19 +1,22 @@
 ```bash
-version: "3.9"
+version: '3.9'
 services:
   homeassistant:
-    image: homeassistant/home-assistant
-    container_name: Home-Assistant
-    mem_limit: 8g
-    cpu_shares: 768
-    security_opt:
-      - no-new-privileges:true
-    healthcheck:
-     test: curl -f http://localhost:8123/ || exit 1
-    restart: on-failure:5
-    network_mode: host
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
     volumes:
-      - /volume2/docker/homeassistant:/config:rw
+      - /volume2/docker/ha:/config
+    restart: unless-stopped
+    privileged: false # Залиште true ТІЛЬКИ якщо підключаєте USB Zigbee/Bluetooth до NAS
+    network_mode: host
     environment:
-      TZ: Europe/Kyiv
+      - TZ=Europe/Kyiv
 ```
+## Integrations
+* HACS
+  * Govee Cloud Integration
+  * Xiaomi Home
+* MELCloud Home
+* Roborock
+* Sonos
+* Tuya
