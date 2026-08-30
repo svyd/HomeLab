@@ -17,6 +17,9 @@ Core containers running on my lab:
 - [Dockhand](/docker/dockhand.md) - Modern Docker management for everyone
 - [qBitTorrent](/docker/qbittorrent.md) - A Qbittorrent containe
 
+### Home Assistant
+[PC321-W-TY WiFi Energy Meter](/HA/PC321-W-TY/README.md) PC321-W-TY WiFi Energy Meter - Home Assistant Integration
+
 ### 💾 Ugreen NAS
 [NASync DXP6800 Pro](/nas) configs and tweaks
 
