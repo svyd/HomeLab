@@ -15,7 +15,8 @@ Core containers running on my lab:
 - [Tailscale](/docker/tailscale.md) — mesh VPN
 - [WireGuard Easy](/docker/wireguard-easy.md) — lightweight VPN
 - [Dockhand](/docker/dockhand.md) - Modern Docker management for everyone
-- [qBitTorrent](/docker/qbittorrent.md) - A Qbittorrent containe
+- [qBitTorrent](/docker/qbittorrent.md) - Qbittorrent container
+- [hawser](docker/hawser.md) - One Dockhand instance manage/observe Docker hosts remotely
 
 ### Home Assistant
 [PC321-W-TY WiFi Energy Meter](/HA/PC321-W-TY/README.md) PC321-W-TY WiFi Energy Meter - Home Assistant Integration
