@@ -1,4 +1,4 @@
-# Hawser is specifically designed to let one Dockhand instance manage/observe Docker hosts remotel
+# Hawser is specifically designed to let one Dockhand instance manage/observe Docker hosts remotely
 
 [Documentation](https://dockhand.pro/manual/#hawser)
 
