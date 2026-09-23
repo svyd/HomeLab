@@ -24,6 +24,10 @@ Core containers running on my lab:
 ### 💾 Ugreen NAS
 [NASync DXP6800 Pro](/nas) configs and tweaks
 
+### Docs
+[NPM Cloudflare certificate configuration](/docs/NPM-certificate-cloudflared.md) NPM Cloudflare certificate configuration
+[NPM Namecheap certificate configuration](/docs/NPM-certificate-namecheap.md) NPM Namecheap certificate configuration
+
 ### 🛠️ Utilities
 Handy [scripts & tools](/other) for maintenance and automation
 - [SSH keys login](/other/ssh_keys_login.md) — ssh keys login
