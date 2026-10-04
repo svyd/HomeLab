@@ -1,3 +1,5 @@
+## RPI
+
 To log into your Raspberry Pi (Pi) from a Mac using SSH keys, first generate keys on your Mac (if you haven't already), then copy your public key to the Pi's `~/.ssh/authorized_keys` file using `ssh-copy-id` or manually, and finally, connect via ssh `pi@<your_pi_ip>` from your Mac's terminal to log in password-free. 
 
 ### Step 1: Generate SSH Keys on Your Mac (If Needed)
@@ -49,4 +51,38 @@ chmod 600 ~/.ssh/config
 
 ```bash
 ssh rpi-patna
+```
+
+## Ugreen NAS - works only if Enabled Personal folders
+
+### Generate an Ed25519 key
+
+```bash
+ssh-keygen -t ed25519 -C "covenant" -f ~/.ssh/covenant
+```
+
+### Prepare the administrator’s SSH directory
+
+Connect to the NAS with the administrator password. Do this under the administrator account before running sudo -i.
+Create the required directory and file:
+
+```bash
+mkdir -p ~/.ssh
+touch ~/.ssh/authorized_keys
+```
+Apply restrictive permissions:
+```bash
+chmod go-w "$HOME"
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+### Add the public key
+```bash
+cat >> ~/.ssh/authorized_keys
+```
+Paste the complete public-key line, press Enter, and then press Ctrl+D to finish.
+
+Reapply the file permission:
+```bash
+chmod 600 ~/.ssh/authorized_keys
 ```

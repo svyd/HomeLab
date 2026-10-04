@@ -17,6 +17,7 @@ Core containers running on my lab:
 - [Dockhand](/docker/dockhand.md) - Modern Docker management for everyone
 - [qBitTorrent](/docker/qbittorrent.md) - Qbittorrent container
 - [hawser](docker/hawser.md) - One Dockhand instance manage/observe Docker hosts remotely
+- [nginx](docker/nginx.md) - Static html page share
 
 ### Home Assistant
 [PC321-W-TY WiFi Energy Meter](/HA/PC321-W-TY/README.md) PC321-W-TY WiFi Energy Meter - Home Assistant Integration
