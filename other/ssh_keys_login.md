@@ -60,6 +60,11 @@ ssh rpi-patna
 ```bash
 ssh-keygen -t ed25519 -C "covenant" -f ~/.ssh/covenant
 ```
+### Display the public key
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
 
 ### Prepare the administrator’s SSH directory
 
