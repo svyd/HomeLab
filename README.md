@@ -28,6 +28,7 @@ Core containers running on my lab:
 ### Docs
 [NPM Cloudflare certificate configuration](/docs/NPM-certificate-cloudflared.md) NPM Cloudflare certificate configuration
 [NPM Namecheap certificate configuration](/docs/NPM-certificate-namecheap.md) NPM Namecheap certificate configuration
+[Dockhand Stack Migration Guide](/docs/Dockhand_Stack_Migration.md) Dockhand Stack Migration Guide
 
 ### 🛠️ Utilities
 Handy [scripts & tools](/other) for maintenance and automation

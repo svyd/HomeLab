@@ -7,7 +7,7 @@ services:
     network_mode: host
     environment:
           - TS_AUTHKEY=AUTH_KEY
-          - TS_EXTRA_ARGS=--advertise-routes=192.168.4.0/22 --advertise-exit-node
+          - TS_EXTRA_ARGS=--advertise-routes=192.168.1.0/24 --advertise-exit-node
           - TS_STATE_DIR=/var/lib/tailscale
           - TS_USERSPACE=false
     container_name: tailscale
