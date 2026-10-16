@@ -7,6 +7,7 @@ services:
     volumes:
       - /volume2/docker/ha:/config
     restart: unless-stopped
+    stop_grace_period: 2m
     privileged: false # Залиште true ТІЛЬКИ якщо підключаєте USB Zigbee/Bluetooth до NAS
     network_mode: host
     environment:
