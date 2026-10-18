@@ -1,6 +1,24 @@
 ```bash
 
-hostname -f && date && df -h && vcgencmd measure_temp && sudo smartctl -a /dev/nvme0n1 | grep Temperature
+hostname -f && date && df -h && vcgencmd measure_temp && sudo smartctl -a /dev/nvme0n1 | grep Temperature && uname -a
+
+patna
+Mon 19 Oct 01:51:06 EEST 2026
+Filesystem      Size  Used Avail Use% Mounted on
+udev            7.9G     0  7.9G   0% /dev
+tmpfs           3.2G   16M  3.2G   1% /run
+/dev/nvme0n1p2  917G   15G  866G   2% /
+tmpfs           8.0G     0  8.0G   0% /dev/shm
+tmpfs           5.0M   48K  5.0M   1% /run/lock
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           8.0G     0  8.0G   0% /tmp
+/dev/nvme0n1p1  510M   68M  443M  14% /boot/firmware
+tmpfs           1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyAMA10.service
+tmpfs           1.6G   32K  1.6G   1% /run/user/1000
+temp=51.6'C
+Temperature:                        33 Celsius
+Linux patna 6.18.34+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64 GNU/Linux
 
 patna
 Thu 27 Aug 21:58:42 EEST 2026

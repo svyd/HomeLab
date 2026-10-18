@@ -1,5 +1,17 @@
 ```bash
-date && df -h && vcgencmd measure_temp
+date && df -h && vcgencmd measure_temp && uname -a
+
+Mon 19 Oct 01:50:26 EEST 2026
+Filesystem      Size  Used Avail Use% Mounted on
+udev            317M     0  317M   0% /dev
+tmpfs           182M  8.8M  173M   5% /run
+/dev/mmcblk0p2   59G  4.6G   51G   9% /
+tmpfs           454M     0  454M   0% /dev/shm
+tmpfs           5.0M   12K  5.0M   1% /run/lock
+/dev/mmcblk0p1  510M   68M  443M  14% /boot/firmware
+tmpfs            91M     0   91M   0% /run/user/1000
+temp=52.1'C
+Linux prometheus 6.12.109+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.109-1+rpt1 (2026-09-11) aarch64 GNU/Linux
 
 Thu 27 Aug 22:01:38 EEST 2026
 Filesystem      Size  Used Avail Use% Mounted on
