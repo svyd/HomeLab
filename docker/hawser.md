@@ -5,9 +5,9 @@
 ## Create Hawser's stack directory
 
 ```bash
-sudo mkdir -p /opt/hawser-stacks
-sudo chown root:root /opt/hawser-stacks
-sudo chmod 755 /opt/hawser-stacks
+sudo mkdir -p /opt/docker/hawser-stacks
+sudo chown root:root /opt/docker/hawser-stacks
+sudo chmod 755 /opt/docker/hawser-stacks
 ```
 
 ## Create the Hawser Compose file
@@ -24,7 +24,7 @@ services:
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /opt/hawser-stacks:/opt/hawser-stacks
+      - /opt/docker/hawser-stacks:/opt/hawser-stacks
 
     environment:
       STACKS_DIR: /opt/hawser-stacks

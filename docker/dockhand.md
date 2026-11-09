@@ -3,7 +3,7 @@
 
 ```bash
 # 1. Create the folder first (good practice)
-sudo mkdir -p /opt/dockhand/data
+sudo mkdir -p /opt/docker/dockhand/data
 
 # 2. Run the container with the new path
 docker run -d \
@@ -11,7 +11,7 @@ docker run -d \
   --restart unless-stopped \
   -p 3000:3000 \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v /opt/dockhand/data:/app/data \
+  -v /opt/docker/dockhand/data:/app/data \
   fnsys/dockhand:latest
 ```
 
@@ -27,7 +27,7 @@ docker rm dockhand
 
 Then recreate it using the same command you originally used, including:
 
-pi
+pi - check correct path
 
 ```bash
 docker run -d \
@@ -35,7 +35,7 @@ docker run -d \
   --restart unless-stopped \
   -p 3000:3000 \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v /opt/dockhand/data:/app/data \
+  -v /opt/docker/dockhand/data:/app/data \
   fnsys/dockhand:latest
   ```
   

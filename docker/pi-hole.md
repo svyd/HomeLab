@@ -1,16 +1,16 @@
 - [Unbound](#unbound)
-- [Default config](#default-config)
-- [Macvlan setup](#macvlan-setup)
 - [Lists](#lists)
 - [Lists from Arsenii](#lists-from-arsenii)
 - [How to test](#how-to-test)
 
 [Pi-hole documentation](https://docs.pi-hole.net/docker/)
 
+# 1. Create the folder first (good practice)
+```bash
+sudo mkdir -p /opt/docker/pihole/etc-pihole
+```
 # Unbound
 ```bash
-version: "3"
-
 services:
   pihole:
     container_name: pihole
@@ -27,8 +27,7 @@ services:
       FTLCONF_dns_listeningMode: "all"
       FTLCONF_dns_upstreams: unbound # ← Uses Docker service name, port 53 by default
     volumes:
-      - "/opt/pihole/etc-pihole:/etc/pihole"
-      - "/opt/pihole/dnsmasq:/etc/dnsmasq.d"
+      - "/opt/docker/pihole/etc-pihole:/etc/pihole"
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
@@ -51,63 +50,11 @@ networks:
     driver: bridge
 ```
 
-# Default config
-Create a new folder /opt/pihole/pihole/etc-pihole
-
-    sudo mkdir /opt/pihole/etc-pihole
-```bash
-services:
-  pihole:
-    container_name: pihole
-    image: pihole/pihole:latest
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "8080:80/tcp" # Use 8080:80/tcp if you have another service running on port 80
-      - "8443:443/tcp"
-    environment:
-      TZ: "Europe/Kyiv" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-      FTLCONF_webserver_api_password: password
-      # If using Docker's default `bridge` network setting the dns listening mode should be set to 'all'
-      FTLCONF_dns_listeningMode: "all"
-    volumes:
-      - "/opt/pihole/etc-pihole:/etc/pihole"
-    restart: unless-stopped
-```
-
-# Macvlan setup
-Remove exposed ports and attach the container to your custom macvlan network.
-For DHCP, you must manually assign a static IP inside your subnet — DHCP doesn’t work directly in Docker macvlan mode.
-
-```bash
-version: "3.7"
-
-services:
-  pihole:
-    container_name: pihole
-    image: pihole/pihole:latest
-    networks:
-      pihole_net_secondary:
-        ipv4_address: 192.168.4.5  # Pick an unused IP in your LAN
-    environment:
-      TZ: 'Europe/Kyiv'
-      FTLCONF_webserver_api_password: password
-      FTLCONF_dns_listeningMode: 'all'
-    volumes:
-      - '/volume2/docker/pihole-secondary/etc-pihole:/etc/pihole'
-    restart: unless-stopped
-networks:
-  pihole_net_secondary:
-    external: true
-```
-
 # Lists
 Source: https://www.reddit.com/r/pihole/comments/1jhlq0j/why_isnt_my_pihole_blocking_ads/
 ```bash
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 https://v.firebog.net/hosts/AdguardDNS.txt
-https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
-https://urlhaus.abuse.ch/downloads/hostfile/
 https://blocklistproject.github.io/Lists/abuse.txt
 https://blocklistproject.github.io/Lists/fraud.txt
 https://blocklistproject.github.io/Lists/malware.txt
